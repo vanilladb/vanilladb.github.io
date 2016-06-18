@@ -1,0 +1,128 @@
+/*!
+* Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    color: grey;
+    text-align: center;
+}
+pre {
+  text-align: left;
+}
+a {
+    color: #669900;
+    text-decoration: underline;
+}
+h3, p, ul {
+    text-align: justify;
+}
+li p {
+    color: grey;
+}
+.navbar {
+    background-color: #669900;
+}
+.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:focus, .navbar-default .navbar-nav> .active> a:hover {
+    color: white;
+    background-color: #666633;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-nav> li> a {
+    color: white;
+    text-decoration: none;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav> li> a:hover {
+    color: lightgrey;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:visited, .navbar-default .navbar-toggle:focus{
+    background-color: #666633;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -o-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.btn-primary, .btn-primary:visited {
+    text-decoration: none;
+    background-color: #669900;
+    border-width: 0;
+    margin: 10px;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{
+    background-color: #666633;
+}
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: solid 2px #eee;
+    text-align: center;
+}
+.row {
+    padding-bottom: 50px;
+}
+.intro-section {
+    background: #fff;
+    padding-top: 200px;
+}
+.header-logo {
+    height: 300px;
+}
+@media(max-width:767px) {
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .intro-section {
+        padding-top: 80px;
+    }
+    .header-logo {
+        height: 200px;
+    }
+    .row {
+        padding-bottom: 30px;
+    }
+}
+.green-text {
+    color: #669900;
+}
+.dark-green-text {
+    color: #666633;
+}
+.about-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #666633;
+    color: white;
+}
+.about-section p {
+    text-align: center;
+}

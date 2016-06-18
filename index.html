@@ -1,10 +1,327 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <title>VanillaDB</title>
-  </head>
+<html lang="en">
 
-  <body>
-    <h1>VanillaDB Test</h1>
-  </body>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>VanillaDB - Simple, fast, and extensible database system prototypes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/vanilladb.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">VanillaDB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#vanilla-core">VanillaCore</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#vanilla-comm">VanillaComm</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#vanilla-bench">VanillaBench</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="section intro-section">
+        <div class="container header-container">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <img class="img-responsive wow center-block header-logo" src="img/vanilladb-logo.png" alt="VanillaDB Logo" />
+                    <h1><span class="dark-green-text">Vanilla</span><span class="green-text"><strong>DB</strong></span></h1>
+                    <h2>Simple, fast, and extensible database system prototypes.</h2>
+                    <!--
+          <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+        -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h1>What's VanillaDB?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <p>VanillaDB is a collection of simple-to-read, fast, and extensible database system components aiming to lower the barrier of new-system prototyping and/or learning the database internals.</p>
+                    <p>Most relational database systems today are too complicated for practitioners, especially newcomers, to leverage and build creative systems/components upon. One main problem is that these systems have been optimized for decades, thus
+                        the source code is highly sophisticated and hard to understand. VanillaDB rewrites some key components of a distributed relational database system with the following goals in mind:</p>
+                    <ul>
+                        <li><strong>Simplicity</strong>: clean code (written in Java), intuitive APIs, and well-documented internals even your grandma can understand;</li>
+                        <li><strong>Performance</strong>: simple, but not the simplest, algorithms that deliver reasonable performance;
+                        </li>
+                        <li><strong>Extensibility</strong>: modular architecture that eases the modification, enhancement/pruning, and development of new systems.</li>
+                    </ul>
+                    <p>The source code of VanillaDB is released under the Apache 2.0 license. And we are happy to hear your feedback or feature requests at <a href="mailto:support@vaniladb.org">support@vanilladb.org</a>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Target Audience</h3>
+                    <p>VanillaDB is ideal for:</p>
+                    <ul>
+                        <li>Database researchers who want to validate new algorithms on a real database system or to design a new system;</li>
+                        <li>Instructors who want their students to grasp solid knowledge about the internals of a database system and ability to make changes.</li>
+                    </ul>
+                    <p>For instructors, we offer extra coding labs that help students get hands-on experience in some important modules (e.g., query planning, transaction processing, etc.). Please contact <a href="mailto:instructor@vanilladb.org">instructor@vanilladb.org</a>                        for more details.</p>
+                    <p>VanillaDB has been used as a testbed in some research work (e.g., <a href="http://www.cs.nthu.edu.tw/~shwu/pubs/shwu-sigmod-16.pdf">T-Part</a> in Proc. of SIGMOD’16) and teaching materials in some DB courses (e.g., the “Cloud Database Systems” offered by National Tsing Hua University, Taiwan). It also
+                        serves as the core engine in some advanced systems (e.g., <a href="http://www.elasql.org">ElaSQL</a>, a deterministic, distributed relational databases systems for OLTP workloads). </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Sub-Projects</h3>
+                    <p>Currently, VanillaDB consists of two sub-projects, namely the VanillaCore and VanillaComm. The former is a single-node relational database engine and the latter provides the group communication primitives for distributed database systems.</p>
+                    <a href="https://github.com/vanilladb/vanillacore" class="btn btn-primary btn-lg animated fadeInUp">Get VanillaCore <br />
+                    <small>Version: 0.2.1</small>
+                    </a>
+                    <a href="https://github.com/vanilladb/vanillacomm" class="btn btn-primary btn-lg animated fadeInUp">Get VanillaComm<br />
+                    <small>Version: 0.1.0</small>
+                    </a>
+                    <p>A new sub-project called VanillaBench is on the way.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Cite</h3>
+                    <p>To cite VanillaDB, please add the following to your BibTex:</p>
+                    <pre>
+  @inproceedings{shwu2016tpart,
+    title={T-Part: Partitioning of Transactions for Forward-Pushing in Deterministic Database Systems},
+    author={Shan-Hung Wu and Tsai-Yu Feng and Meng-Kai Liao and Shao-Kan Pi and Yu-Shan Lin},
+    booktitle={Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data (SIGMOD)},
+    year={2012},
+    organization={ACM}
+  }
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VanillaCore Section -->
+    <section id="vanilla-core" class="section vanilla-core-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h1>VanillaCore</h1>
+                    <p>VanillaCore is a single node, multi-threaded relational database engine that partially supports the SQL-92 standard and offers connectivity via JDBC, embedding, or (Java-based) stored procedures.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Architecture</h3>
+                    <img class="img-responsive wow center-block" data-wow-delay=".3s" src="img/vanilla-core_architecture.png" alt="VanillaCore Architecture" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>Getting started</li>
+                        <ul>
+                            <li>Configurations, command line interpreter, etc.</li>
+                        </ul>
+                        <li>Background</li>
+                        <ul>
+                            <li>Why relational database systems? ER- and relational-models, transactions and logical schema design and normal forms, etc.</li>
+                        </ul>
+                        <li>Architecture overview and interfaces</li>
+                        <ul>
+                            <li>Client-server interfaces, embedding, storage interfaces, etc.</li>
+                        </ul>
+                        <li>Query engine</li>
+                        <ul>
+                            <li>Server and threads
+                                <p>Threads v.s. connections v.s. transactions, thread-local v.s. thread-safe components, etc.</p>
+                            </li>
+
+                            <li>Query Processing
+                                <p>SQL parsing and validation, planning, algebra, plan/scan trees, etc.</p>
+                            </li>
+                        </ul>
+                        <li>Storage</li>
+                        <ul>
+                            <li>Data access and file management
+                                <p>Block-level v.s. file-level access, O_DIRECT on Linux, etc.</p>
+                            </li>
+                            <li>Memory management
+                                <p>Buffering user data, write-ahead-logging (WAL), log caching, etc.</p>
+                            </li>
+                            <li>Record and metadata management
+                                <p>Physical schema design, efficient buffer utilization, etc.</p>
+                            </li>
+                        </ul>
+                        <li>Transaction management</li>
+                        <ul>
+                            <li>Concurrency
+                                <p>Strict Two-Phase Locking (S2PL), deadlock detection/avoidance, lock granularity, phantom, isolation levels, etc.</p>
+                            </li>
+                            <li>Recovery
+                                <p>Physical logging, transaction rollback, UNDO-only recovery, UNDO-REDO recovery, logical logging, physiological logging, ARIES, checkpointing, etc.</p>
+                            </li>
+                        </ul>
+                        <li>Efficient query processing</li>
+                        <ul>
+                            <li>Indexing
+                                <p>Hash and B-tree indexing, index locking, etc.</p>
+                            </li>
+                            <li>Materialization and sorting (TBA)</li>
+                            <li>Effective buffer utilization (TBA)</li>
+                            <li>Query optimization (TBA)</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <a href="https://github.com/vanilladb/vanillacore" class="btn btn-primary btn-lg animated fadeInUp">Get VanillaCore <br />
+                    <small>Version: 0.2.1</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VanillaComm Section -->
+    <section id="vanilla-comm" class="section vanilla-comm-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h1>VanillaComm</h1>
+                    <p>VanillaComm is a collection of reliable group communication primitives (e.g., total-ordering) that can benefit the distributed database systems (e.g., eager-replication, NewSQL database systems). It is based on the <a href="http://appia.di.fc.ul.pt/wiki/index.php?title=Main_Page">Appia framework</a>                        and handles node/machine failure transparently.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Primitives and Stakes</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>Getting started</li>
+                        <ul>
+                            <li>Configurations, applications, etc.</li>
+                        </ul>
+                        <li>Appia</li>
+                        <ul>
+                            <li>Layers, sessions, Qos, channel, etc.</li>
+                        </ul>
+                        <li>Basic abstraction</li>
+                        <ul>
+                            <li>Perfect point-to-point link, perfect failure detection, etc.</li>
+                        </ul>
+                        <li>Reliable Broadcast</li>
+                        <ul>
+                            <li>Best-effort broadcast, reliable broadcast, uniform reliable broadcast, etc.</li>
+                        </ul>
+                        <li>Consensus</li>
+                        <ul>
+                            <li>Flooding consensus, sequencer-based consensus, Paxos, etc.</li>
+                        </ul>
+                        <li>Total-ordering</li>
+                        <ul>
+                            <li>Consensus-based total-ordering, Zab, etc.</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <a href="https://github.com/vanilladb/vanillacomm" class="btn btn-primary btn-lg animated fadeInUp">Get VanillaComm<br />
+                    <small>Version: 0.1.0</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VanillaBench Section -->
+    <section id="vanilla-bench" class="section vanilla-bench-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h1>VanillaBench</h1>
+                    <p>VanillaBench eases the database system benchmarking by partially implementing some common benchmarks (e.g., TPC-C, TPC-E, or YCSB). Coming soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h1>About</h1>
+                    <p>Copyright © by vanilladb.org. All rights reserved.</p>
+                    <p>Please contact <a href="mailto:support@vanilladb.org">support@vanilladb.org</a> if you have any question.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/vanilladb.js"></script>
+
+</body>
+
 </html>
