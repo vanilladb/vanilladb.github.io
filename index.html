@@ -134,14 +134,13 @@
                     <h3>Cite</h3>
                     <p>To cite VanillaDB, please add the following to your BibTex:</p>
                     <pre>
-  @inproceedings{shwu2016tpart,
-    title={T-Part: Partitioning of Transactions for Forward-Pushing in Deterministic Database Systems},
-    author={Shan-Hung Wu and Tsai-Yu Feng and Meng-Kai Liao and Shao-Kan Pi and Yu-Shan Lin},
-    booktitle={Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data (SIGMOD)},
-    year={2012},
-    organization={ACM}
-  }
-                    </pre>
+@inproceedings{shwu2016tpart,
+  title={T-Part: Partitioning of Transactions for Forward-Pushing in Deterministic Database Systems},
+  author={Shan-Hung Wu and Tsai-Yu Feng and Meng-Kai Liao and Shao-Kan Pi and Yu-Shan Lin},
+  booktitle={Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data (SIGMOD)},
+  year={2012},
+  organization={ACM}
+}</pre>
                 </div>
             </div>
 
@@ -167,52 +166,52 @@
                 <div class="col-sm-offset-1 col-sm-10">
                     <h3>Documentation</h3>
                     <ul>
-                        <li>Getting started</li>
+                        <li><a href="https://github.com/vanilladb/vanillacore">Getting started</a></li>
                         <ul>
                             <li>Configurations, command line interpreter, etc.</li>
                         </ul>
-                        <li>Background</li>
+                        <li><a href="slides/Background.pdf">Background</a></li>
                         <ul>
                             <li>Why relational database systems? ER- and relational-models, transactions and logical schema design and normal forms, etc.</li>
                         </ul>
-                        <li>Architecture overview and interfaces</li>
+                        <li><a href="slides/Architecture_and_Interfaces.pdf">Architecture overview and interfaces</a></li>
                         <ul>
                             <li>Client-server interfaces, embedding, storage interfaces, etc.</li>
                         </ul>
                         <li>Query engine</li>
                         <ul>
-                            <li>Server and threads
+                            <li><a href="slides/Server_and_Threads.pdf">Server and threads</a>
                                 <p>Threads v.s. connections v.s. transactions, thread-local v.s. thread-safe components, etc.</p>
                             </li>
 
-                            <li>Query Processing
+                            <li><a href="slides/Query_Processing.pdf">Query Processing</a>
                                 <p>SQL parsing and validation, planning, algebra, plan/scan trees, etc.</p>
                             </li>
                         </ul>
                         <li>Storage</li>
                         <ul>
-                            <li>Data access and file management
+                            <li><a href="slides/Data_Access_and_File_Management.pdf">Data access and file management</a>
                                 <p>Block-level v.s. file-level access, O_DIRECT on Linux, etc.</p>
                             </li>
-                            <li>Memory management
+                            <li><a href="slides/Memory_Management.pdf">Memory management</a>
                                 <p>Buffering user data, write-ahead-logging (WAL), log caching, etc.</p>
                             </li>
-                            <li>Record and metadata management
+                            <li><a href="slides/Record_Management.pdf">Record</a> and <a href="slides/Metadata_Management.pdf">metadata management</a>
                                 <p>Physical schema design, efficient buffer utilization, etc.</p>
                             </li>
                         </ul>
                         <li>Transaction management</li>
                         <ul>
-                            <li>Concurrency
+                            <li><a href="slides/Transaction_Concurrency.pdf">Concurrency</a>
                                 <p>Strict Two-Phase Locking (S2PL), deadlock detection/avoidance, lock granularity, phantom, isolation levels, etc.</p>
                             </li>
-                            <li>Recovery
+                            <li><a href="slides/Transaction_Recovery.pdf">Recovery</a>
                                 <p>Physical logging, transaction rollback, UNDO-only recovery, UNDO-REDO recovery, logical logging, physiological logging, ARIES, checkpointing, etc.</p>
                             </li>
                         </ul>
                         <li>Efficient query processing</li>
                         <ul>
-                            <li>Indexing
+                            <li><a href="slides/Indexing.pdf">Indexing</a>
                                 <p>Hash and B-tree indexing, index locking, etc.</p>
                             </li>
                             <li>Materialization and sorting (TBA)</li>
