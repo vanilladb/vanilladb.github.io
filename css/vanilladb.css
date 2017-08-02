@@ -126,3 +126,7 @@ of those sections to manage the look and feel of the site. */
 .about-section p {
     text-align: center;
 }
+
+.magic-show{
+    transition : 0.5s ease;
+}
